@@ -37,11 +37,12 @@
 
 @layer base {
   button {
-    color: inherit;       /* 부모 요소의 글자색을 따름 */
-    background: none;    /* 배경 제거 */
-    border: none;        /* 테두리 제거 */
-    padding: 0;          /* 여백 제거 */
-    font: inherit;       /* 폰트 상속 */
-    cursor: pointer;     /* 커서 모양 고정 */
+    /* 부모를 따라가는 게 아니라, 테일윈드 클래스(@apply)가 
+       최우선으로 적용되도록 강제합니다. */
+    @apply !text-white; 
+
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }
