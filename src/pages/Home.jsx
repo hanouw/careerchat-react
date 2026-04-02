@@ -54,26 +54,12 @@ export default function Home() {
             <p>그럴줄 몰랐던 단점</p>
             <p>숨겨져있던 내 업무능력</p>
           </div>
-          <p className="text-gray-600 mb-8 font-medium">가고싶은 회사가 있으면 커리어챗은 최대한 도와드리겠습니다</p>
-          <button className="bg-black text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform">
-            지금 진단받기
-          </button>
-        </div>
-      </div>
-      <div className="flex flex-col md:flex-row gap-12 items-center">
-        <div className="flex-1">
-          <h1 className="text-5xl font-black leading-tight mb-8">
-            포트폴리오, 이력서를 <br />직접 준비했다고 해서 <br />
-            그게 당신의 전부가 <br /> 아닙니다.
-          </h1>
-          <div className="space-y-2 text-gray-500 mb-10">
-            <p>잊고 있었던 장점</p>
-            <p>그럴줄 몰랐던 단점</p>
-            <p>숨겨져있던 내 업무능력</p>
-          </div>
-          <button className="bg-black text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform">
-            지금 진단받기
-          </button>
+        <button 
+          style={{ color: 'white' }} // 강제로 인라인 스타일 부여
+          className="bg-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform"
+        >
+          지금 진단받기
+        </button>
         </div>
 
         {/* --- 인터랙티브 브라우저 모형 --- */}
