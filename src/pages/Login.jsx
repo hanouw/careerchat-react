@@ -7,13 +7,13 @@ export default function Login() {
     <div className="flex min-h-screen bg-[#EEF2FF] relative overflow-hidden">
 
       {/* --- 좌하단 캡슐 데코레이션 (테일윈드 버전) --- */}
-      <div className="absolute -bottom-16 -left-16 w-80 h-32 bg-[#AFB3FF] rounded-full rotate-90 z-0 animate-shadow-pulse"></div>
+      <div className="absolute hidden lg:block -bottom-16 -left-16 w-80 h-32 bg-[#AFB3FF] rounded-full rotate-90 z-0 animate-shadow-pulse"></div>
 
       {/* 우측: 보라색 영역 */}
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-[#AFB3FF] hidden lg:block"></div>
+      <div className="absolute right-0 top-0 w-1/3 h-full bg-[#AFB3FF] hidden lg:block z-0"></div>
       
       {/* 왼쪽: 로그인 폼 영역 */}
-      <div className="flex-1 flex flex-col justify-center items-center p-12 z-10 relative">
+      <div className="flex-2 flex flex-col justify-center items-center p-12 z-10 relative">
         <div className="w-full max-w-sm">
           <h2 className="text-2xl font-bold mb-10 text-center text-[#1E293B]">Welcome Back!</h2>
           <div className="space-y-6">
@@ -45,11 +45,13 @@ export default function Login() {
       </div>
 
       {/* 오른쪽: 애니메이션 일러스트 영역 */}
-      <div className="hidden lg:flex flex-1 items-center justify-center pr-30 z-10 relative">
+      <div className="hidden lg:flex flex-1 items-center justify-center p-20 z-10 relative">
         <div className="w-full max-w-lg aspect-square relative">
-          {/* 컴퓨터 이미지 영역 */}
-          <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-large">
-            <img src={laptopImg} alt="laptop" className="w-[80%] h-auto drop-shadow-2xl" />
+          
+          {/* 노트북 이미지를 '경계선'에 걸치게 하고 싶다면? */}
+          {/* left-0과 -translate-x-1/2를 조합하면 정확히 보라색 시작 선에 중심이 옵니다. */}
+          <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full animate-float-large">
+            <img src={laptopImg} alt="laptop" className="w-full h-auto drop-shadow-2xl" />
           </div>
         </div>
       </div>

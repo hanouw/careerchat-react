@@ -6,17 +6,19 @@ export default function Signup() {
   return (
     <div className="flex min-h-screen bg-[#EEF2FF] relative overflow-hidden">
       
-      {/* --- 코드로 구현한 배경 바 (Ribbon) 영역 --- */}
-      {/* 뒤쪽 진한 색상 바 (#656ED3) */}
-      <div className="absolute left-20 -top-20 w-64 h-[120%] bg-[#656ED3] rounded-[100px] rotate-[15deg] z-0 opacity-90"></div>
-      
-      {/* 앞쪽 연한 색상 바 (#AFB3FF) */}
-      <div className="absolute left-10 -top-20 w-64 h-[120%] bg-[#AFB3FF] rounded-[100px] rotate-[15deg] z-0 shadow-2xl"></div>
-      {/* -------------------------------------- */}
+      {/* 1. Left Side: 리본과 이미지를 하나의 그룹으로 묶음 */}
+      <div className="hidden lg:flex flex-[1.2] items-center justify-center relative z-10">
+        
+        {/* --- 배경 리본 (이제 이 flex 영역 안에서만 움직입니다) --- */}
+        {/* 뒤쪽 진한 색상 바: 중앙에서 약간 왼쪽으로 배치 */}
+        <div className="absolute left-[30%] -top-20 w-72 h-[130%] bg-[#656ED3] rounded-[100px] rotate-15 z-0 opacity-90"></div>
+        
+        {/* 앞쪽 연한 색상 바: 뒤쪽 바보다 살짝 더 왼쪽으로 배치 */}
+        <div className="absolute left-[20%] -top-20 w-72 h-[130%] bg-[#AFB3FF] rounded-[100px] rotate-15 z-0 shadow-2xl"></div>
+        {/* -------------------------------------------------- */}
 
-      {/* Left Side: Illustration (이미지 하나 + 애니메이션) */}
-      <div className="hidden lg:flex flex-1 items-center justify-center p-20 z-10">
-        <div className="w-full max-w-lg animate-float-large">
+        {/* 일러스트: 리본 위에 둥둥 떠 있음 */}
+        <div className="w-full max-w-xl animate-float-large relative z-10">
           <img 
             src={signupImg} 
             alt="Signup Illustration" 
@@ -83,11 +85,10 @@ export default function Signup() {
               Yes i have an account? <Link to="/login" className="font-bold text-[#1E293B] hover:underline ml-1">Login</Link>
             </p>
 
-            {/* Social Icons */}
-            <div className="flex justify-center space-x-4">
-              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">f</div>
-              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">w</div>
-              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">t</div>
+            <div className="flex justify-center space-x-4 pt-4">
+              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 shadow-md">f</div>
+              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 shadow-md">w</div>
+              <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 shadow-md">t</div>
             </div>
           </div>
         </div>

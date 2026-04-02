@@ -35,28 +35,19 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <p className="text-gray-600 text-sm mb-10">커리어챗은 다음과 같은 기능을 제공합니다.</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-        <FeatureCard title="단점과 해결책을 찾으세요." sub="지피지기 백전백승. 솔루션을 제공해드립니다." color="bg-orange-500" desc="단점을 알려드립니다" />
-        <FeatureCard title="개선점을 찾고 더 발전하세요." sub="현재에 안주하지 마세요. 개선점을 추천해드립니다." color="bg-blue-500" desc="개선점을 추천해드립니다" />
-        <FeatureCard title="장점과 그것을 활용할 방법입니다." sub="이미 뛰어난 부분에 매몰되지 마세요. 충분한 자질에 대해 진단합니다." color="bg-green-500" desc="장점을 알려드립니다" />
-      </div>
-
       <div className="flex flex-col md:flex-row gap-12 items-center">
         <div className="flex-1">
-          <h1 className="text-5xl font-black leading-tight mb-8">
+          <h1 className="text-3xl lg:text-5xl font-black leading-tight mb-8">
             포트폴리오, 이력서를 <br />직접 준비했다고 해서 <br />
             그게 당신의 전부가 <br /> 아닙니다.
           </h1>
-          <div className="space-y-2 text-gray-500 mb-10">
+          <div className="space-y-2 text-gray-500 mb-10 text-sm lg:text-md">
             <p>잊고 있었던 장점</p>
             <p>그럴줄 몰랐던 단점</p>
             <p>숨겨져있던 내 업무능력</p>
           </div>
         <button 
-          style={{ color: 'white' }} // 강제로 인라인 스타일 부여
-          className="bg-black px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform"
+          className="bg-black text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform"
         >
           지금 진단받기
         </button>
@@ -122,6 +113,14 @@ export default function Home() {
              <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]"></div>
            </div>
         </div>
+      </div>
+
+      <p className="text-gray-600 text-sm lg:text-lg font-bold mb-10 mt-25">커리어챗은 다음과 같은 기능을 제공합니다.</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+        <FeatureCard title="단점과 해결책을 찾으세요." sub="지피지기 백전백승. 솔루션을 제공해드립니다." color="bg-orange-500" desc="단점을 알려드립니다" />
+        <FeatureCard title="개선점을 찾고 더 발전하세요." sub="현재에 안주하지 마세요. 개선점을 추천해드립니다." color="bg-blue-500" desc="개선점을 추천해드립니다" />
+        <FeatureCard title="장점과 그것을 활용할 방법입니다." sub="이미 뛰어난 부분에 매몰되지 마세요. 충분한 자질에 대해 진단합니다." color="bg-green-500" desc="장점을 알려드립니다" />
       </div>
     </div>
   );
