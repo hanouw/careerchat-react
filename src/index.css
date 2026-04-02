@@ -20,7 +20,7 @@
       transform: rotate(45deg) scale(1);
     }
     50% { 
-      box-shadow: -25px -25px 50px 10px rgba(79, 70, 229, 0.7);
+      box-shadow: -25px -25px 60px 2px rgba(79, 70, 229, 0.7);
       transform: rotate(45deg) scale(1.01);
     }
   }
