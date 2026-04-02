@@ -7,16 +7,24 @@ import Result from './pages/Result';
 import MyInfo from './pages/MyInfo';
 
 const router = createBrowserRouter([
+  // 1. Header/Footer가 필요한 페이지들
   {
     path: '/',
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'login', element: <Login /> },
-      { path: 'signup', element: <Signup /> },
       { path: 'result', element: <Result /> },
       { path: 'myinfo', element: <MyInfo /> },
     ],
+  },
+  // 2. Header/Footer가 필요 없는 페이지들 (RootLayout 밖으로 이동)
+  {
+    path: 'login',
+    element: <Login />,
+  },
+  {
+    path: 'signup',
+    element: <Signup />,
   },
 ]);
 

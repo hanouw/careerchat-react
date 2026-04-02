@@ -1,1 +1,37 @@
+/* 1. 테일윈드 v4 엔진 불러오기 */
 @import "tailwindcss";
+
+@theme {
+  /* 애니메이션 이름과 설정 정의 */
+  --animate-float-large: float-large 6s ease-in-out infinite;
+  /* 1. 두 가지 그림자 상태 정의 */
+  /* --shadow-up-light: -10px -10px 20px 0px rgba(99, 102, 241, 0.2);
+  --shadow-up-dense: -25px -25px 50px 10px rgba(79, 70, 229, 0.7); */
+
+  --shadow-up-light: -3px 10px 30px 5px #838CF1;
+  --shadow-up-dense: -3px 10px 0px #838CF1;
+
+  /* 2. 그림자 애니메이션 */
+  --animate-shadow-pulse: shadow-pulse 12s ease-in-out infinite;
+
+  @keyframes shadow-pulse {
+    0%, 100% { 
+      box-shadow: -10px -10px 20px 0px rgba(99, 102, 241, 0.2);
+      transform: rotate(45deg) scale(1);
+    }
+    50% { 
+      box-shadow: -25px -25px 50px 10px rgba(79, 70, 229, 0.7);
+      transform: rotate(45deg) scale(1.01);
+    }
+  }
+
+  @keyframes float-large {
+    0%, 100% { 
+      transform: translateY(-10px) rotate(-1deg) scale(1.02); 
+    }
+    50% { 
+      transform: translateY(10px) rotate(1deg) scale(0.98); 
+    }
+  }
+}
+
