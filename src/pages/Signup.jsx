@@ -84,7 +84,7 @@ export default function Signup() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex justify-center space-x-4 pt-6">
+            <div className="flex justify-center space-x-4">
               <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">f</div>
               <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">w</div>
               <div className="w-8 h-8 bg-[#818CF8] rounded-full flex items-center justify-center text-white text-[12px] cursor-pointer hover:bg-indigo-700 transition-colors shadow-md">t</div>
